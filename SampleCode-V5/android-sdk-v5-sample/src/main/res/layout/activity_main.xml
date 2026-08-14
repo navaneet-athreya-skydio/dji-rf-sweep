@@ -177,6 +177,7 @@
                     android:padding="8dp"
                     android:text="@string/testing_tools"
                     android:textColor="@color/selector_enable_button" />
+
             </LinearLayout>
         </ScrollView>
 

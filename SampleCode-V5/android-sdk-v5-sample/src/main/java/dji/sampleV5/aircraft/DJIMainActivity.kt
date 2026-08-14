@@ -170,9 +170,7 @@ abstract class DJIMainActivity : AppCompatActivity() {
 
     private fun showToast(content: String) {
         ToastUtils.showToast(content)
-
     }
-
 
     fun <T> enableDefaultLayout(cl: Class<T>) {
         enableShowCaseButton(binding.defaultLayoutButton, cl)
