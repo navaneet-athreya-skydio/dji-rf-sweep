@@ -76,6 +76,7 @@ object ChunkLogger {
     fun start(cameraIndex: ComponentIndexType) {
         activeIndex = cameraIndex
         listener = ICameraStreamManager.ReceiveStreamListener { _, _, length, info ->
+            Log.d("CHUNK_RAW", "len=$length isKey=${info.isKeyFrame} pts=${info.presentationTimeMs} fps=${info.frameRate} res=${info.width}x${info.height} mime=${info.mimeType?.name}")
             chunkCount++
             totalBytes += length
             if (length < minBytes) minBytes = length
